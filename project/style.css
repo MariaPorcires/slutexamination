@@ -11,11 +11,15 @@ body {
    
 }
 
+
+
 main {
+    display: block;
     height: 100vh;
     display: flex;
     flex-direction: row;
 }
+
 
 h1 {
     color: white;
@@ -45,6 +49,7 @@ h3 {
 }
 
 #sun {
+    border-style: none;
     position: absolute;
     width: 1278px;
     height: 1278px;
