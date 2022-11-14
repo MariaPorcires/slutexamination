@@ -11,6 +11,10 @@ body {
    
 }
 
+#pageInfo {
+    display: none;
+    color: white;
+}
 
 
 main {
