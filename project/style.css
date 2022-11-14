@@ -2,26 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
 
    background-image: linear-gradient(to right,  rgb(2, 2, 77), black);
+   overflow: hidden;
    
 }
 
 
+
 #pageInfo {
+    position: absolute;
     height: 100vh;
     background-image: url("background-starry-sky-8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
     color: white;
-    display: flex;
+    
 
 }
+
 
 
 main {

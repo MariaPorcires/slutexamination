@@ -59,7 +59,7 @@ console.log(planetId);
 console.log(planetData);
 
 
-//vad gör detta exakt
+//indexOf, vad gör allt detta? vad gör row?
 const id = planetMatch.indexOf(planetId);  
 const planetRow = planetData.bodies.find(function(row){  //bodies - arrayen i API, jämför, returnera
     return row.id===id;})
@@ -86,18 +86,20 @@ function showPage(page){
 
 function showPlanetData(row){ 
     const planetName = document.getElementById(`planetName`); 
-    planetName.innerText = row.name; 
+    planetName.innerText = row.name; //namnet från arrayen i API
     const planetLatin = document.getElementById(`planetLatin`); 
     planetLatin.innerText = row.latinName; 
     const planetDesc = document.getElementById(`planetDesc`);
     planetDesc.innerText = row.desc;
+    const planetCircum = document.getElementById(`planetCircum`);
+    planetCircum.innerText = row.circumference;
 }
     
 
 start();
 
 
-//row?
+//row
 
 
 
