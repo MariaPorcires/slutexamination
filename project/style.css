@@ -11,9 +11,16 @@ body {
    
 }
 
+
 #pageInfo {
+    height: 100vh;
+    background-image: url("background-starry-sky-8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: none;
     color: white;
+    display: flex;
+
 }
 
 
@@ -62,6 +69,7 @@ h3 {
     border-radius: 50%;
     background: #FFD029;
     box-shadow: 0px 0px 250px rgba(255, 208, 41, 0.2);
+    cursor: pointer;
 }
 
 #mercury {
@@ -72,6 +80,7 @@ h3 {
     top: 443px;
     background: #888888;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #venus {
@@ -82,6 +91,7 @@ h3 {
     top: 437px;
     background: #E7CDCD;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #earth {
@@ -92,6 +102,7 @@ h3 {
     top: 436px;
     border-radius: 50%;
     background: #428ED5;
+    cursor: pointer;
 }
 
 #mars {
@@ -102,6 +113,7 @@ h3 {
     top: 443px;
     border-radius: 50%;
     background: #EF5F5F;
+    cursor: pointer;
 }
 
 #jupiter {
@@ -112,6 +124,7 @@ h3 {
     top: 356px;
     border-radius: 50%;
     background: #E29468;
+    cursor: pointer;
 }
 
 #saturnouter {
@@ -122,14 +135,15 @@ h3 {
     top: 378px;
     border-radius: 50%;
     background: #C7AA72;
+    cursor: pointer;
 }
 
 #saturninner {
     position: absolute;
     width: 218.23px;
     height: 5.5px;
-    left: 851.13px;
-    top: 440.18px;
+    left: 851px;
+    top: 440px;
     background: rgba(255, 255, 255, 0.4);
     transform: rotate(-30deg);
     border-radius: 40%;
@@ -143,6 +157,7 @@ h3 {
     top: 417px;
     border-radius: 50%;
     background: #C9D4F1;
+    cursor: pointer;
 }
 
 #neptune {
@@ -153,4 +168,5 @@ h3 {
     top: 417px;
     border-radius: 50%;
     background: #7A91A7;
+    cursor: pointer;
 }

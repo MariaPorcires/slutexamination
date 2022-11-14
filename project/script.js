@@ -12,7 +12,7 @@ let planetMatch = [
     `uranus`,
     `neptune`
 ]
-
+//array med alla planetid från html
 
 
 async function getKey() {
@@ -43,14 +43,14 @@ async function start(){
 function createEvents() { //själva funktionen för events
     const elementMain = document.querySelector(`main`); // hämta main
     const planets = elementMain.querySelectorAll(`button`); // hämta alla knappar
-    planets.forEach(function(button){ //funktion för varje klick, ska loopa igenom alla
+    planets.forEach(function(button){ //funktion för varje klick
         button.addEventListener(`click`, buttonClick);
         const backButton = document.getElementById(`back`);
         backButton.addEventListener(`click`, backClick);
     });
 }
 
-function buttonClick(event) { //för att hämta rätt info till rätt planet
+function buttonClick(event) { //för att klicka på rätt planet - hämtar från HTMl med event target
     const button = event.currentTarget;
     const planetId = button.id;
    
@@ -58,8 +58,10 @@ function buttonClick(event) { //för att hämta rätt info till rätt planet
 console.log(planetId);
 console.log(planetData);
 
-const id = planetMatch.indexOf(planetId);
-const planetRow = planetData.bodies.find(function(row){ 
+
+//vad gör detta exakt
+const id = planetMatch.indexOf(planetId);  
+const planetRow = planetData.bodies.find(function(row){  //bodies - arrayen i API, jämför, returnera
     return row.id===id;})
 
 hidePage(document.getElementById(`pagePlanets`));
@@ -78,21 +80,24 @@ function showPage(page){
  } 
 
  function backClick(){
-     showPage(document.getElementById("pagePlanets")); 
-     hidePage(document.getElementById("pageInfo"));
+     showPage(document.getElementById(`pagePlanets`)); 
+     hidePage(document.getElementById(`pageInfo`));
      } 
 
 function showPlanetData(row){ 
-    const planetName=document.getElementById("planetName"); 
+    const planetName = document.getElementById(`planetName`); 
     planetName.innerText = row.name; 
-    const planetLatin = document.getElementById("planetLatin"); 
-    planetLatin.innerText=row.latinName; 
-    console.log(planetLatin)
+    const planetLatin = document.getElementById(`planetLatin`); 
+    planetLatin.innerText = row.latinName; 
+    const planetDesc = document.getElementById(`planetDesc`);
+    planetDesc.innerText = row.desc;
 }
     
 
 start();
 
+
+//row?
 
 
 
