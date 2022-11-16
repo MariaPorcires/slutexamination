@@ -93,13 +93,22 @@ function showPlanetData(row){
     planetDesc.innerText = row.desc;
     const planetCircum = document.getElementById(`planetCircum`);
     planetCircum.innerText = row.circumference;
+    const planetDistance = document.getElementById(`planetDistance`);
+    planetDistance.innerText = row.distance;
+    const planetMaxTemp = document.getElementById(`planetMaxTemp`);
+    planetMaxTemp.innerText = row.temp.day;
+    const planetMinTemp = document.getElementById(`planetMinTemp`);
+    planetMinTemp.innerText = row.temp.night;
+    const planetMoons = document.getElementById(`planetMoons`);
+    planetMoons.innerText = row.moons;
+    
 }
     
 
 start();
 
 
-//row
+
 
 
 
