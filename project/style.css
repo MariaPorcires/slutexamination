@@ -6,13 +6,17 @@
 
 body {
 
-   background-image: linear-gradient(to right,  rgb(2, 2, 77), black);
    overflow: hidden;
-   
+   display: flex;
+   flex-direction: column;
 }
 
+#pagePlanets {
+    background-image: linear-gradient(to right,  rgb(2, 2, 77), black);
+}
 
 #pageInfo {
+    width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: absolute;
     height: 100vh;
@@ -21,15 +25,55 @@ body {
     background-size: cover;
     display: none;
     color: white;
+}
+
+.content {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+.content h1 {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.content h3 {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.contentTwo {
+    display: grid;
+    grid-template-columns: auto auto;
+    border-top: 0.1rem solid lightgray;
+    border-bottom: 0.1rem solid lightgray;
+    padding: 1rem;
+}
+
+#back {
+    background-color: transparent;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 10px;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    padding: 7px 15px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#back:hover {
+    color: transparent;
 
 }
 
-
 main {
-    display: block;
-    height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: 100vh;
+    
 }
 
 

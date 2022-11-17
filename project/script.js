@@ -12,6 +12,7 @@ let planetMatch = [
     `uranus`,
     `neptune`
 ]
+
 //array med alla planetid från html
 
 
@@ -59,10 +60,10 @@ console.log(planetId);
 console.log(planetData);
 
 
-//indexOf, vad gör allt detta? vad gör row?
-const id = planetMatch.indexOf(planetId);  
-const planetRow = planetData.bodies.find(function(row){  //bodies - arrayen i API, jämför, returnera
-    return row.id===id;})
+
+const id = planetMatch.indexOf(planetId); // ta reda på vilket index har planetId i planetMatch  
+const planetRow = planetData.bodies.find(function(planetRow){  // söka igenom bodies, vilken planet har det id
+    return planetRow.id===id;}) 
 
 hidePage(document.getElementById(`pagePlanets`));
 showPage(document.getElementById(`pageInfo`));
@@ -76,7 +77,7 @@ function hidePage(page){
 }
 
 function showPage(page){ 
-    page.style.display=`block`;
+    page.style.display=`flex`;
  } 
 
  function backClick(){
@@ -84,23 +85,23 @@ function showPage(page){
      hidePage(document.getElementById(`pageInfo`));
      } 
 
-function showPlanetData(row){ 
+function showPlanetData(planetRow){ 
     const planetName = document.getElementById(`planetName`); 
-    planetName.innerText = row.name; //namnet från arrayen i API
+    planetName.innerText = planetRow.name; //namnet från arrayen i API
     const planetLatin = document.getElementById(`planetLatin`); 
-    planetLatin.innerText = row.latinName; 
+    planetLatin.innerText = planetRow.latinName; 
     const planetDesc = document.getElementById(`planetDesc`);
-    planetDesc.innerText = row.desc;
+    planetDesc.innerText = planetRow.desc;
     const planetCircum = document.getElementById(`planetCircum`);
-    planetCircum.innerText = row.circumference;
+    planetCircum.innerText = planetRow.circumference;
     const planetDistance = document.getElementById(`planetDistance`);
-    planetDistance.innerText = row.distance;
+    planetDistance.innerText = planetRow.distance;
     const planetMaxTemp = document.getElementById(`planetMaxTemp`);
-    planetMaxTemp.innerText = row.temp.day;
+    planetMaxTemp.innerText = planetRow.temp.day;
     const planetMinTemp = document.getElementById(`planetMinTemp`);
-    planetMinTemp.innerText = row.temp.night;
+    planetMinTemp.innerText = planetRow.temp.night;
     const planetMoons = document.getElementById(`planetMoons`);
-    planetMoons.innerText = row.moons;
+    planetMoons.innerText = planetRow.moons.join(`, `);
     
 }
     
